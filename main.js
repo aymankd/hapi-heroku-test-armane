@@ -39,7 +39,7 @@ server.route([
 ]);
 
 function show(params) {
-  console.log(JSON.stringify(params, null, 2));
+  console.log(params);
 }
 
 server.events.on("request", (request, event, tags) => {
