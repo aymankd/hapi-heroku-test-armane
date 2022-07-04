@@ -38,14 +38,14 @@ server.route([
   },
 ]);
 
+function show(params) {
+  console.log(JSON.stringify(params, null, 2));
+}
+
 server.events.on("request", (request, event, tags) => {
-  if (tags.error) {
-    console.log(
-      `${request.method} :: Request ${event} error: ${
-        event.error ? event.error : "unknown"
-      }`
-    );
-  }
+  show(request);
+  show(event);
+  show(tags);
 });
 
 server.start(function () {
