@@ -43,7 +43,7 @@ function show(params) {
 }
 
 server.events.on("request", (request, event, tags) => {
-  show(request);
+  // show(request);
   show(event);
   show(tags);
 });
