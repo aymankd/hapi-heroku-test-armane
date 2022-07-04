@@ -14,7 +14,7 @@ internals.echo = function (request, h) {
 };
 
 var server = new Hapi.Server({
-  port: process.env.PORT || 80,
+  port: parseInt(process.env.PORT || 80),
   host: "localhost",
 });
 
